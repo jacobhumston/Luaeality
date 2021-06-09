@@ -1,10 +1,12 @@
 local discordia = require('discordia')
-local client = discordia.Client()
+local client = discordia.Client{
+    cacheAllMembers = true,
+}
 local token = require("token")
 local config = require("config")
 
 client:on('ready', function()
-	print('Logged in as: '..client.user.username)
+    print("Ready!")
 end)
 
 local function startswith(String,Start)
@@ -23,7 +25,12 @@ client:on('messageCreate', function(message)
     end
     
     if hasprefix("help") then
-        message:reply("I'm here! <3")
+        local embed = {
+            title = "Help",
+            description = "<:Bot:852216908362940416> Hello! My name is Luaeality and I'm an [open source](https://github.com/jacobhumston/Luaeality) Discord bot written in Lua.",
+            color = discordia.color:fromHex("#5865F2"),
+        }
+        message:reply(embed)
     end
 end)
 
