@@ -3,7 +3,7 @@ local client = discordia.Client()
 local token = require("token")
 
 client:on('ready', function()
-	print('Logged in as '.. client.user.username).."!"
+	print('Logged in as '..client.user.username.."!")
 end)
 
 client:on('messageCreate', function(message)
