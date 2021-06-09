@@ -6,7 +6,7 @@ local token = require("token")
 local config = require("config")
 
 client:on('ready', function()
-    client:setStatus("idle")
+    client:setStatus("online")
     print("Ready!")
 end)
 
