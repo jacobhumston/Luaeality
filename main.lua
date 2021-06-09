@@ -25,7 +25,9 @@ client:on('messageCreate', function(message)
     end
     
     if hasprefix("help") then
-        message:addReaction(852216908362940416)
+        message:addReaction(discordia.Emoji{
+            id = "852216908362940416",
+        })
         message:reply{embed = {
             title = "Help",
             description = "<:Bot:852216908362940416> Hello! My name is Luaeality and I'm an [open source](https://github.com/jacobhumston/Luaeality) Discord bot written in Lua.",
