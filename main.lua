@@ -30,6 +30,7 @@ client:on('messageCreate', function(message)
         message.channel:send{
         reference = {
             refMessage = message.id,
+            refMention = false,
         },
         embed = {
             title = "Help",
