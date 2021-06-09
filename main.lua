@@ -33,7 +33,7 @@ client:on('messageCreate', function(message)
             title = "Help",
             description = "<:Bot:852216908362940416> Hello! My name is Luaeality and I'm an [open source](https://github.com/jacobhumston/Luaeality) Discord bot written in Lua.",
             color = 0x6666ff,
-        }}
+        }}}
     end
 end)
 
