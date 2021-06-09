@@ -25,7 +25,7 @@ client:on('messageCreate', function(message)
     end
     
     if hasprefix("help") then
-        message:addReaction(discordia.Emoji{
+        message:addReaction(discordia.emoji{
             id = "852216908362940416",
         })
         message:reply{embed = {
