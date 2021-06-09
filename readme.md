@@ -12,3 +12,8 @@ return {
 }
 ```
 Then run `luvit main.lua` and youre good to go!
+
+# Support
+If you need help, join the Discord server: https://discord.gg/2yyQygXP8u
+
+*Ask for help in `#support-1` or `#support-2`.*
