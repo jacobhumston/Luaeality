@@ -1,14 +1,28 @@
 local discordia = require('discordia')
 local client = discordia.Client()
 local token = require("token")
+local config = require("config")
 
 client:on('ready', function()
 	print('Logged in as: '..client.user.username)
 end)
 
+function string.starts(String,Start)
+    return string.sub(String,1,string.len(Start)) == Start
+end 
+-- https://stackoverflow.com/questions/22831701/lua-read-beginning-of-a-string 
+
 client:on('messageCreate', function(message)
-    local prefix = "!"
-    if string.lower(message.content) == prefix.."help" then
+    local functon hasprefix(command) 
+        for i,v in ipairs(config.prefixes) do
+            if string.starts(string.lower(message),v..command) then
+                return true
+            end
+        end
+        return nil
+    end
+    
+    if hasprefix("help") then
         message:reply("I'm here! <3")
     end
 end)
