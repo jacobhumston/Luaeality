@@ -28,7 +28,7 @@ client:on('messageCreate', function(message)
         local embed = {
             title = "Help",
             description = "<:Bot:852216908362940416> Hello! My name is Luaeality and I'm an [open source](https://github.com/jacobhumston/Luaeality) Discord bot written in Lua.",
-            color = 0x5865F2,
+            color = 0x6666ff,
         }
         message:reply(embed)
     end
