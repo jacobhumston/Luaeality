@@ -7,7 +7,7 @@ client:on('ready', function()
 	print('Logged in as: '..client.user.username)
 end)
 
-function string.starts(String,Start)
+local function startswith(String,Start)
     return string.sub(String,1,string.len(Start)) == Start
 end 
 -- https://stackoverflow.com/questions/22831701/lua-read-beginning-of-a-string 
@@ -15,7 +15,7 @@ end
 client:on('messageCreate', function(message)
     local functon hasprefix(command) 
         for i,v in ipairs(config.prefixes) do
-            if string.starts(string.lower(message),v..command) then
+            if startswith(string.lower(message),v..command) then
                 return true
             end
         end
