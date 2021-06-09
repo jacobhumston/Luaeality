@@ -15,7 +15,7 @@ end
 client:on('messageCreate', function(message)
     local function hasprefix(command) 
         for i,v in ipairs(config.prefixes) do
-            if startswith(string.lower(message),v..command) then
+            if startswith(string.lower(message.content),v..command) then
                 return true
             end
         end
