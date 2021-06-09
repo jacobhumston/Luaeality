@@ -13,7 +13,7 @@ end
 -- https://stackoverflow.com/questions/22831701/lua-read-beginning-of-a-string 
 
 client:on('messageCreate', function(message)
-    local functon hasprefix(command) 
+    local function hasprefix(command) 
         for i,v in ipairs(config.prefixes) do
             if startswith(string.lower(message),v..command) then
                 return true
