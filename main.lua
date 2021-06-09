@@ -29,6 +29,7 @@ client:on('messageCreate', function(message)
         message:addReaction(client:getEmoji(852216908362940416))
         message.channel:send{
         reference = message.id,
+        mention = message.author,
         embed = {
             title = "Help",
             description = "<:Bot:852216908362940416> Hello! My name is Luaeality and I'm an [open source](https://github.com/jacobhumston/Luaeality) Discord bot written in Lua.",
