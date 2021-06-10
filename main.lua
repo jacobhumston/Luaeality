@@ -33,6 +33,7 @@ client:on('messageCreate', function(message)
                 output = output + " ,`"..v.."`"
             end
         end
+        return output
     end
     
     if hasprefix("help") then
