@@ -30,7 +30,7 @@ client:on('messageCreate', function(message)
             if output == "" then
                 output = "`"..v.."`"
             else
-                output = output + " ,`"..v.."`"
+                output = output.." ,`"..v.."`"
             end
         end
         return output
