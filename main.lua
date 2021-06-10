@@ -25,14 +25,13 @@ client:on('messageCreate', function(message)
     end
     
     if hasprefix("help") then
-        message:addReaction(client:getEmoji(852216908362940416))
         message.channel:send{
         reference = {
             message = message.id,
         },
         embed = {
             title = "Help",
-            description = "<:Bot:852216908362940416> Hello! My name is Luaeality and I'm an [open source](https://github.com/jacobhumston/Luaeality) Discord bot written in Lua.",
+            description = "<:Bot:852216908362940416> Hello! My name is Luaeality and I'm an [open source](https://github.com/jacobhumston/Luaeality) Discord bot written in Lua.<:Support:852216908383125535> If you need support: https://discord.gg/2yyQygXP8u",
             color = 0x6666ff,
         }}
     end
