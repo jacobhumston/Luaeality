@@ -23,7 +23,18 @@ client:on('messageCreate', function(message)
         end
         return nil
     end
-    if hasprefix("help") then
+    local function getprefixes()
+        local output = ""
+        for i,v in ipairs(config.prefixes) do 
+            if output == "" then
+                output = "`"..v.."`"
+            else
+                output = output..", `"..v.."`"
+            end
+        end
+        return output
+    end    
+    if hasprefix("help") == true then
         message.channel:send{
             reference = {
                 message = message.id,
