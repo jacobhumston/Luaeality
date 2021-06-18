@@ -34,7 +34,7 @@ client:on('messageCreate', function(message)
         end
         return output
     end    
-    if hasprefix("help") == true then
+    if hasprefix("help") then
         message.channel:send{
             reference = {
                 message = message.id,
